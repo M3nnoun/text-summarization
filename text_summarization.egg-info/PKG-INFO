@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: text-summarization
+Version: 0.1.0
+Summary: A text summarization package
+Home-page: https://github.com/m3nnoun/text-summarization
+Author: m3nnoun
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-python
+Dynamic: summary
