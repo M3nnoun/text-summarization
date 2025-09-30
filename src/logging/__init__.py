@@ -15,10 +15,6 @@ logging.basicConfig(
     filename=log_file_path,
     level=logging.INFO,
     format=logging_str,
-    filemode="a",
-    handlers=[
-        logging.FileHandler(log_file_path),
-    ]
 )
 
 logger=logging.getLogger()
