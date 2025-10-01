@@ -72,3 +72,879 @@ Source-Age: 0
 [2025-10-01 23:36:12,994 - INFO - main - >>>>>>> Stage Data Ingestion Stage completed <<<<<<<<
 
 x==========x]
+[2025-10-02 00:15:10,237 - INFO - main - >>>>>>> Stage Data Ingestion Stage started <<<<<<<<]
+[2025-10-02 00:15:10,351 - ERROR - main - while scanning a simple key
+  in "config\config.yaml", line 14, column 3
+could not find expected ':'
+  in "config\config.yaml", line 15, column 1]
+Traceback (most recent call last):
+  File "C:\Users\ThinkPad\Documents\machine-learning\text-summarization\main.py", line 14, in <module>
+    data_validation.main()
+  File "C:\Users\ThinkPad\Documents\machine-learning\text-summarization\src\pipelines\stage_02_data_validation.py", line 13, in main
+    config = ConfigurationManager().get_data_validation_config()
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ThinkPad\Documents\machine-learning\text-summarization\src\config\configuration.py", line 13, in __init__
+    self.config = read_yaml(config_filepath)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ThinkPad\anaconda3\envs\text-sum\Lib\site-packages\ensure\main.py", line 872, in __call__
+    return_val = self.f(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ThinkPad\Documents\machine-learning\text-summarization\src\utils\common.py", line 33, in read_yaml
+    raise e
+  File "C:\Users\ThinkPad\Documents\machine-learning\text-summarization\src\utils\common.py", line 25, in read_yaml
+    content = yaml.safe_load(yaml_file)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ThinkPad\anaconda3\envs\text-sum\Lib\site-packages\yaml\__init__.py", line 125, in safe_load
+    return load(stream, SafeLoader)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ThinkPad\anaconda3\envs\text-sum\Lib\site-packages\yaml\__init__.py", line 81, in load
+    return loader.get_single_data()
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ThinkPad\anaconda3\envs\text-sum\Lib\site-packages\yaml\constructor.py", line 49, in get_single_data
+    node = self.get_single_node()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ThinkPad\anaconda3\envs\text-sum\Lib\site-packages\yaml\composer.py", line 36, in get_single_node
+    document = self.compose_document()
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ThinkPad\anaconda3\envs\text-sum\Lib\site-packages\yaml\composer.py", line 55, in compose_document
+    node = self.compose_node(None, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ThinkPad\anaconda3\envs\text-sum\Lib\site-packages\yaml\composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ThinkPad\anaconda3\envs\text-sum\Lib\site-packages\yaml\composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ThinkPad\anaconda3\envs\text-sum\Lib\site-packages\yaml\composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ThinkPad\anaconda3\envs\text-sum\Lib\site-packages\yaml\composer.py", line 127, in compose_mapping_node
+    while not self.check_event(MappingEndEvent):
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ThinkPad\anaconda3\envs\text-sum\Lib\site-packages\yaml\parser.py", line 98, in check_event
+    self.current_event = self.state()
+                         ^^^^^^^^^^^^
+  File "C:\Users\ThinkPad\anaconda3\envs\text-sum\Lib\site-packages\yaml\parser.py", line 428, in parse_block_mapping_key
+    if self.check_token(KeyToken):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ThinkPad\anaconda3\envs\text-sum\Lib\site-packages\yaml\scanner.py", line 115, in check_token
+    while self.need_more_tokens():
+          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ThinkPad\anaconda3\envs\text-sum\Lib\site-packages\yaml\scanner.py", line 152, in need_more_tokens
+    self.stale_possible_simple_keys()
+  File "C:\Users\ThinkPad\anaconda3\envs\text-sum\Lib\site-packages\yaml\scanner.py", line 291, in stale_possible_simple_keys
+    raise ScannerError("while scanning a simple key", key.mark,
+yaml.scanner.ScannerError: while scanning a simple key
+  in "config\config.yaml", line 14, column 3
+could not find expected ':'
+  in "config\config.yaml", line 15, column 1
+[2025-10-02 00:15:31,916 - INFO - main - >>>>>>> Stage Data Ingestion Stage started <<<<<<<<]
+[2025-10-02 00:15:31,956 - INFO - common - YAML file config\config.yaml loaded successfully]
+[2025-10-02 00:15:31,956 - INFO - common - YAML file params.yaml loaded successfully]
+[2025-10-02 00:15:31,970 - ERROR - main - "'ConfigBox' object has no attribute 'status_file'"]
+Traceback (most recent call last):
+  File "box\\box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'STATUS_FILE'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 633, in box.box.Box.__getattr__
+  File "box\\box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'STATUS_FILE'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'STATUS_FILE'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\config_box.py", line 29, in box.config_box.ConfigBox.__getattr__
+  File "box\\box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'STATUS_FILE'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'status_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 633, in box.box.Box.__getattr__
+  File "box\\box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'status_file'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'status_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ThinkPad\Documents\machine-learning\text-summarization\main.py", line 14, in <module>
+    data_validation.main()
+  File "C:\Users\ThinkPad\Documents\machine-learning\text-summarization\src\pipelines\stage_02_data_validation.py", line 13, in main
+    config = ConfigurationManager().get_data_validation_config()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ThinkPad\Documents\machine-learning\text-summarization\src\config\configuration.py", line 42, in get_data_validation_config
+    status_file=config.STATUS_FILE,
+                ^^^^^^^^^^^^^^^^^^
+  File "box\\config_box.py", line 31, in box.config_box.ConfigBox.__getattr__
+  File "box\\box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'status_file'"
+[2025-10-02 00:16:11,271 - INFO - main - >>>>>>> Stage Data Ingestion Stage started <<<<<<<<]
+[2025-10-02 00:16:11,285 - INFO - common - YAML file config\config.yaml loaded successfully]
+[2025-10-02 00:16:11,285 - INFO - common - YAML file params.yaml loaded successfully]
+[2025-10-02 00:16:11,300 - ERROR - main - "'ConfigBox' object has no attribute 'status_file'"]
+Traceback (most recent call last):
+  File "box\\box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'STATUS_FILE'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 633, in box.box.Box.__getattr__
+  File "box\\box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'STATUS_FILE'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'STATUS_FILE'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\config_box.py", line 29, in box.config_box.ConfigBox.__getattr__
+  File "box\\box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'STATUS_FILE'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'status_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 633, in box.box.Box.__getattr__
+  File "box\\box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'status_file'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'status_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ThinkPad\Documents\machine-learning\text-summarization\main.py", line 14, in <module>
+    data_validation.main()
+  File "C:\Users\ThinkPad\Documents\machine-learning\text-summarization\src\pipelines\stage_02_data_validation.py", line 13, in main
+    config = ConfigurationManager().get_data_validation_config()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ThinkPad\Documents\machine-learning\text-summarization\src\config\configuration.py", line 42, in get_data_validation_config
+    status_file=config.STATUS_FILE,
+                ^^^^^^^^^^^^^^^^^^
+  File "box\\config_box.py", line 31, in box.config_box.ConfigBox.__getattr__
+  File "box\\box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'status_file'"
+[2025-10-02 00:16:34,315 - INFO - main - >>>>>>> Stage Data Ingestion Stage started <<<<<<<<]
+[2025-10-02 00:16:34,319 - INFO - common - YAML file config\config.yaml loaded successfully]
+[2025-10-02 00:16:34,322 - INFO - common - YAML file params.yaml loaded successfully]
+[2025-10-02 00:16:34,325 - ERROR - main - "'ConfigBox' object has no attribute 'status_file'"]
+Traceback (most recent call last):
+  File "box\\box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'STATUS_FILE'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 633, in box.box.Box.__getattr__
+  File "box\\box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'STATUS_FILE'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'STATUS_FILE'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\config_box.py", line 29, in box.config_box.ConfigBox.__getattr__
+  File "box\\box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'STATUS_FILE'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'status_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 633, in box.box.Box.__getattr__
+  File "box\\box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'status_file'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'status_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ThinkPad\Documents\machine-learning\text-summarization\main.py", line 14, in <module>
+    data_validation.main()
+  File "C:\Users\ThinkPad\Documents\machine-learning\text-summarization\src\pipelines\stage_02_data_validation.py", line 13, in main
+    config = ConfigurationManager().get_data_validation_config()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ThinkPad\Documents\machine-learning\text-summarization\src\config\configuration.py", line 42, in get_data_validation_config
+    status_file=config.STATUS_FILE,
+                ^^^^^^^^^^^^^^^^^^
+  File "box\\config_box.py", line 31, in box.config_box.ConfigBox.__getattr__
+  File "box\\box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'status_file'"
+[2025-10-02 00:22:02,664 - INFO - main - >>>>>>> Stage Data Ingestion Stage started <<<<<<<<]
+[2025-10-02 00:22:02,680 - INFO - common - YAML file config\config.yaml loaded successfully]
+[2025-10-02 00:22:02,680 - INFO - common - YAML file params.yaml loaded successfully]
+[2025-10-02 00:22:02,688 - ERROR - main - "'ConfigBox' object has no attribute 'status_file'"]
+Traceback (most recent call last):
+  File "box\\box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'status_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 633, in box.box.Box.__getattr__
+  File "box\\box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'status_file'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'status_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\config_box.py", line 29, in box.config_box.ConfigBox.__getattr__
+  File "box\\box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'status_file'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'status_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 633, in box.box.Box.__getattr__
+  File "box\\box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'status_file'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'status_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ThinkPad\Documents\machine-learning\text-summarization\main.py", line 14, in <module>
+    data_validation.main()
+  File "C:\Users\ThinkPad\Documents\machine-learning\text-summarization\src\pipelines\stage_02_data_validation.py", line 13, in main
+    config = ConfigurationManager().get_data_validation_config()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ThinkPad\Documents\machine-learning\text-summarization\src\config\configuration.py", line 42, in get_data_validation_config
+    status_file=config.status_file,
+                ^^^^^^^^^^^^^^^^^^
+  File "box\\config_box.py", line 31, in box.config_box.ConfigBox.__getattr__
+  File "box\\box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'status_file'"
+[2025-10-02 00:29:16,466 - INFO - main - >>>>>>> Stage Data Ingestion Stage started <<<<<<<<]
+[2025-10-02 00:29:16,470 - INFO - common - YAML file config\config.yaml loaded successfully]
+[2025-10-02 00:29:16,473 - INFO - common - YAML file params.yaml loaded successfully]
+[2025-10-02 00:29:16,475 - ERROR - main - "'ConfigBox' object has no attribute 'status_file'"]
+Traceback (most recent call last):
+  File "box\\box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'status_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 633, in box.box.Box.__getattr__
+  File "box\\box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'status_file'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'status_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\config_box.py", line 29, in box.config_box.ConfigBox.__getattr__
+  File "box\\box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'status_file'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'status_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 633, in box.box.Box.__getattr__
+  File "box\\box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'status_file'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'status_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ThinkPad\Documents\machine-learning\text-summarization\main.py", line 14, in <module>
+    data_validation.main()
+  File "C:\Users\ThinkPad\Documents\machine-learning\text-summarization\src\pipelines\stage_02_data_validation.py", line 13, in main
+    config = ConfigurationManager().get_data_validation_config()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ThinkPad\Documents\machine-learning\text-summarization\src\config\configuration.py", line 42, in get_data_validation_config
+    status_file=config.status_file,
+                ^^^^^^^^^^^^^^^^^^
+  File "box\\config_box.py", line 31, in box.config_box.ConfigBox.__getattr__
+  File "box\\box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'status_file'"
+[2025-10-02 00:29:53,363 - INFO - main - >>>>>>> Stage Data Ingestion Stage started <<<<<<<<]
+[2025-10-02 00:29:53,365 - INFO - common - YAML file config\config.yaml loaded successfully]
+[2025-10-02 00:29:53,370 - INFO - common - YAML file params.yaml loaded successfully]
+[2025-10-02 00:29:53,371 - ERROR - main - "'ConfigBox' object has no attribute 'status_file'"]
+Traceback (most recent call last):
+  File "box\\box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'status_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 633, in box.box.Box.__getattr__
+  File "box\\box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'status_file'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'status_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\config_box.py", line 29, in box.config_box.ConfigBox.__getattr__
+  File "box\\box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'status_file'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'status_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 633, in box.box.Box.__getattr__
+  File "box\\box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'status_file'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'status_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ThinkPad\Documents\machine-learning\text-summarization\main.py", line 14, in <module>
+    data_validation.main()
+  File "C:\Users\ThinkPad\Documents\machine-learning\text-summarization\src\pipelines\stage_02_data_validation.py", line 13, in main
+    config = ConfigurationManager().get_data_validation_config()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ThinkPad\Documents\machine-learning\text-summarization\src\config\configuration.py", line 42, in get_data_validation_config
+    status_file=config.status_file,
+                ^^^^^^^^^^^^^^^^^^
+  File "box\\config_box.py", line 31, in box.config_box.ConfigBox.__getattr__
+  File "box\\box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'status_file'"
+[2025-10-02 00:30:07,763 - INFO - main - >>>>>>> Stage Data Ingestion Stage started <<<<<<<<]
+[2025-10-02 00:30:07,770 - INFO - common - YAML file config\config.yaml loaded successfully]
+[2025-10-02 00:30:07,770 - INFO - common - YAML file params.yaml loaded successfully]
+[2025-10-02 00:30:07,780 - ERROR - main - "'ConfigBox' object has no attribute 'status_file'"]
+Traceback (most recent call last):
+  File "box\\box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'STATUS_FILE'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 633, in box.box.Box.__getattr__
+  File "box\\box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'STATUS_FILE'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'STATUS_FILE'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\config_box.py", line 29, in box.config_box.ConfigBox.__getattr__
+  File "box\\box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'STATUS_FILE'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'status_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 633, in box.box.Box.__getattr__
+  File "box\\box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'status_file'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'status_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ThinkPad\Documents\machine-learning\text-summarization\main.py", line 14, in <module>
+    data_validation.main()
+  File "C:\Users\ThinkPad\Documents\machine-learning\text-summarization\src\pipelines\stage_02_data_validation.py", line 13, in main
+    config = ConfigurationManager().get_data_validation_config()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ThinkPad\Documents\machine-learning\text-summarization\src\config\configuration.py", line 42, in get_data_validation_config
+    status_file=config.STATUS_FILE,
+                ^^^^^^^^^^^^^^^^^^
+  File "box\\config_box.py", line 31, in box.config_box.ConfigBox.__getattr__
+  File "box\\box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'status_file'"
+[2025-10-02 00:31:46,065 - INFO - main - >>>>>>> Stage Data Ingestion Stage started <<<<<<<<]
+[2025-10-02 00:31:46,076 - INFO - common - YAML file config\config.yaml loaded successfully]
+[2025-10-02 00:31:46,082 - INFO - common - YAML file params.yaml loaded successfully]
+[2025-10-02 00:31:46,084 - ERROR - main - "'ConfigBox' object has no attribute 'status_file'"]
+Traceback (most recent call last):
+  File "box\\box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'STATUS_FILE'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 633, in box.box.Box.__getattr__
+  File "box\\box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'STATUS_FILE'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'STATUS_FILE'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\config_box.py", line 29, in box.config_box.ConfigBox.__getattr__
+  File "box\\box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'STATUS_FILE'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'status_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 633, in box.box.Box.__getattr__
+  File "box\\box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'status_file'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'status_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ThinkPad\Documents\machine-learning\text-summarization\main.py", line 14, in <module>
+    data_validation.main()
+  File "C:\Users\ThinkPad\Documents\machine-learning\text-summarization\src\pipelines\stage_02_data_validation.py", line 13, in main
+    config = ConfigurationManager().get_data_validation_config()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ThinkPad\Documents\machine-learning\text-summarization\src\config\configuration.py", line 42, in get_data_validation_config
+    status_file=config.STATUS_FILE,
+                ^^^^^^^^^^^^^^^^^^
+  File "box\\config_box.py", line 31, in box.config_box.ConfigBox.__getattr__
+  File "box\\box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'status_file'"
+[2025-10-02 00:32:44,633 - INFO - main - >>>>>>> Stage Data Ingestion Stage started <<<<<<<<]
+[2025-10-02 00:32:44,637 - INFO - common - YAML file config\config.yaml loaded successfully]
+[2025-10-02 00:32:44,641 - INFO - common - YAML file params.yaml loaded successfully]
+[2025-10-02 00:32:44,645 - ERROR - main - "'ConfigBox' object has no attribute 'status_file'"]
+Traceback (most recent call last):
+  File "box\\box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'status_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 633, in box.box.Box.__getattr__
+  File "box\\box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'status_file'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'status_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\config_box.py", line 29, in box.config_box.ConfigBox.__getattr__
+  File "box\\box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'status_file'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'status_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 633, in box.box.Box.__getattr__
+  File "box\\box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'status_file'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'status_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ThinkPad\Documents\machine-learning\text-summarization\main.py", line 14, in <module>
+    data_validation.main()
+  File "C:\Users\ThinkPad\Documents\machine-learning\text-summarization\src\pipelines\stage_02_data_validation.py", line 13, in main
+    config = ConfigurationManager().get_data_validation_config()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ThinkPad\Documents\machine-learning\text-summarization\src\config\configuration.py", line 42, in get_data_validation_config
+    status_file=config.status_file,
+                ^^^^^^^^^^^^^^^^^^
+  File "box\\config_box.py", line 31, in box.config_box.ConfigBox.__getattr__
+  File "box\\box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'status_file'"
+[2025-10-02 00:37:20,101 - INFO - main - >>>>>>> Stage Data Ingestion Stage started <<<<<<<<]
+[2025-10-02 00:37:20,118 - INFO - common - YAML file config\config.yaml loaded successfully]
+[2025-10-02 00:37:20,126 - INFO - common - YAML file params.yaml loaded successfully]
+[2025-10-02 00:37:20,129 - ERROR - main - "'ConfigBox' object has no attribute 'status_file'"]
+Traceback (most recent call last):
+  File "box\\box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'status_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 633, in box.box.Box.__getattr__
+  File "box\\box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'status_file'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'status_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\config_box.py", line 29, in box.config_box.ConfigBox.__getattr__
+  File "box\\box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'status_file'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'status_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 633, in box.box.Box.__getattr__
+  File "box\\box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'status_file'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'status_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ThinkPad\Documents\machine-learning\text-summarization\main.py", line 14, in <module>
+    data_validation.main()
+  File "C:\Users\ThinkPad\Documents\machine-learning\text-summarization\src\pipelines\stage_02_data_validation.py", line 13, in main
+    config = ConfigurationManager().get_data_validation_config()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ThinkPad\Documents\machine-learning\text-summarization\src\config\configuration.py", line 42, in get_data_validation_config
+    status_file=config.status_file,
+                ^^^^^^^^^^^^^^^^^^
+  File "box\\config_box.py", line 31, in box.config_box.ConfigBox.__getattr__
+  File "box\\box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'status_file'"
+[2025-10-02 00:37:44,823 - INFO - main - >>>>>>> Stage Data Ingestion Stage started <<<<<<<<]
+[2025-10-02 00:37:44,834 - INFO - common - YAML file config\config.yaml loaded successfully]
+[2025-10-02 00:37:44,834 - INFO - common - YAML file params.yaml loaded successfully]
+[2025-10-02 00:37:44,838 - ERROR - main - "'ConfigBox' object has no attribute 'status_file'"]
+Traceback (most recent call last):
+  File "box\\box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'STATUS_FILE'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 633, in box.box.Box.__getattr__
+  File "box\\box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'STATUS_FILE'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'STATUS_FILE'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\config_box.py", line 29, in box.config_box.ConfigBox.__getattr__
+  File "box\\box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'STATUS_FILE'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'status_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 633, in box.box.Box.__getattr__
+  File "box\\box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'status_file'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'status_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ThinkPad\Documents\machine-learning\text-summarization\main.py", line 14, in <module>
+    data_validation.main()
+  File "C:\Users\ThinkPad\Documents\machine-learning\text-summarization\src\pipelines\stage_02_data_validation.py", line 13, in main
+    config = ConfigurationManager().get_data_validation_config()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ThinkPad\Documents\machine-learning\text-summarization\src\config\configuration.py", line 42, in get_data_validation_config
+    status_file=config.STATUS_FILE,
+                ^^^^^^^^^^^^^^^^^^
+  File "box\\config_box.py", line 31, in box.config_box.ConfigBox.__getattr__
+  File "box\\box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'status_file'"
+[2025-10-02 00:40:12,387 - INFO - main - >>>>>>> Stage Data Ingestion Stage started <<<<<<<<]
+[2025-10-02 00:40:12,393 - INFO - common - YAML file config\config.yaml loaded successfully]
+[2025-10-02 00:40:12,393 - INFO - common - YAML file params.yaml loaded successfully]
+[2025-10-02 00:40:12,397 - ERROR - main - "'ConfigBox' object has no attribute 'status_file'"]
+Traceback (most recent call last):
+  File "box\\box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'STATUS_FILE'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 633, in box.box.Box.__getattr__
+  File "box\\box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'STATUS_FILE'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'STATUS_FILE'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\config_box.py", line 29, in box.config_box.ConfigBox.__getattr__
+  File "box\\box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'STATUS_FILE'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'status_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 633, in box.box.Box.__getattr__
+  File "box\\box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'status_file'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'status_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ThinkPad\Documents\machine-learning\text-summarization\main.py", line 14, in <module>
+    data_validation.main()
+  File "C:\Users\ThinkPad\Documents\machine-learning\text-summarization\src\pipelines\stage_02_data_validation.py", line 13, in main
+    config = ConfigurationManager().get_data_validation_config()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ThinkPad\Documents\machine-learning\text-summarization\src\config\configuration.py", line 42, in get_data_validation_config
+    status_file=config.STATUS_FILE,
+                ^^^^^^^^^^^^^^^^^^
+  File "box\\config_box.py", line 31, in box.config_box.ConfigBox.__getattr__
+  File "box\\box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'status_file'"
+[2025-10-02 00:41:27,979 - INFO - main - >>>>>>> Stage Data Ingestion Stage started <<<<<<<<]
+[2025-10-02 00:41:27,980 - INFO - common - YAML file config\config.yaml loaded successfully]
+[2025-10-02 00:41:27,980 - INFO - common - YAML file params.yaml loaded successfully]
+[2025-10-02 00:41:27,988 - ERROR - main - "'ConfigBox' object has no attribute 'status_file'"]
+Traceback (most recent call last):
+  File "box\\box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'STATUS_FILE'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 633, in box.box.Box.__getattr__
+  File "box\\box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'STATUS_FILE'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'STATUS_FILE'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\config_box.py", line 29, in box.config_box.ConfigBox.__getattr__
+  File "box\\box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'STATUS_FILE'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'status_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 633, in box.box.Box.__getattr__
+  File "box\\box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'status_file'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'status_file'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ThinkPad\Documents\machine-learning\text-summarization\main.py", line 14, in <module>
+    data_validation.main()
+  File "C:\Users\ThinkPad\Documents\machine-learning\text-summarization\src\pipelines\stage_02_data_validation.py", line 13, in main
+    config = ConfigurationManager().get_data_validation_config()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ThinkPad\Documents\machine-learning\text-summarization\src\config\configuration.py", line 42, in get_data_validation_config
+    STATUS_FILE=config.STATUS_FILE,
+                ^^^^^^^^^^^^^^^^^^
+  File "box\\config_box.py", line 31, in box.config_box.ConfigBox.__getattr__
+  File "box\\box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'status_file'"
+[2025-10-02 00:41:42,597 - INFO - main - >>>>>>> Stage Data Ingestion Stage started <<<<<<<<]
+[2025-10-02 00:41:42,613 - INFO - common - YAML file config\config.yaml loaded successfully]
+[2025-10-02 00:41:42,613 - INFO - common - YAML file params.yaml loaded successfully]
+[2025-10-02 00:41:42,618 - ERROR - main - 'DataValidation' object has no attribute 'validate_all_files']
+Traceback (most recent call last):
+  File "C:\Users\ThinkPad\Documents\machine-learning\text-summarization\main.py", line 14, in <module>
+    data_validation.main()
+  File "C:\Users\ThinkPad\Documents\machine-learning\text-summarization\src\pipelines\stage_02_data_validation.py", line 15, in main
+    data_validation.validate_all_files()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DataValidation' object has no attribute 'validate_all_files'. Did you mean: 'validate_all_files_exist'?
+[2025-10-02 00:42:07,628 - INFO - main - >>>>>>> Stage Data Ingestion Stage started <<<<<<<<]
+[2025-10-02 00:42:07,641 - INFO - common - YAML file config\config.yaml loaded successfully]
+[2025-10-02 00:42:07,648 - INFO - common - YAML file params.yaml loaded successfully]
+[2025-10-02 00:42:07,652 - INFO - main - >>>>>>> Stage Data Ingestion Stage completed <<<<<<<<
+
+x==========x]
