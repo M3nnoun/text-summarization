@@ -5,7 +5,7 @@ from src.logging import logger
 from ensure import ensure_annotations
 from box import ConfigBox
 from pathlib import Path
-from typing import Any
+from typing import Any,List
 
 
 @ensure_annotations
@@ -32,18 +32,12 @@ def read_yaml(path_to_yaml :Path) -> ConfigBox:
     except Exception as e:
         raise e
 
-@ensure_annotations
-def create_directories(path_to_directories: list, verbose=True) -> None:
-    """Creates directories if they do not exist.
 
-    Args:
-        path_to_directories (list): List of directory paths to create.
-        verbose (bool, optional): If True, logs the creation of directories. Defaults to True.
-    """
+def create_directories(path_to_directories: List[Path], verbose: bool = True):
     for path in path_to_directories:
         os.makedirs(path, exist_ok=True)
         if verbose:
-            logger.info(f"Directory created at: {path}")
+            print(f"Created directory at: {path}")
     
 @ensure_annotations
 def get_size(path: Path) -> str:

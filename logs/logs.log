@@ -1,3 +1,74 @@
 [2025-09-30 19:25:21,196 - INFO - main - Starting the application...]
 [2025-09-30 19:25:27,012 - INFO - main - Starting the application...]
 [2025-09-30 19:25:28,510 - INFO - main - Starting the application...]
+[2025-10-01 16:24:27,262 - INFO - common - YAML file config\config.yaml loaded successfully]
+[2025-10-01 16:24:27,262 - INFO - common - YAML file params.yaml loaded successfully]
+[2025-10-01 16:25:48,705 - INFO - test - artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 7903594
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "dbc016a060da18070593b83afff580c9b300f0b6ea4147a7988433e04df246ca"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: EACA:FB76C:893F4C:A108E4:68DD47AC
+Accept-Ranges: bytes
+Date: Wed, 01 Oct 2025 15:24:30 GMT
+Via: 1.1 varnish
+X-Served-By: cache-lis1490029-LIS
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1759332270.727667,VS0,VE575
+Vary: Authorization,Accept-Encoding
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: c8cf5962ca8b8c719fa4dc0be6546673cebfd95d
+Expires: Wed, 01 Oct 2025 15:29:30 GMT
+Source-Age: 0
+
+]
+[2025-10-01 23:34:45,989 - INFO - main - >>>>>>> Stage Data Ingestion Stage started <<<<<<<<]
+[2025-10-01 23:34:45,992 - ERROR - main - 'DataIngestionPipeline' object has no attribute 'config']
+Traceback (most recent call last):
+  File "C:\Users\ThinkPad\Documents\machine-learning\text-summarization\main.py", line 10, in <module>
+    data_ingestion.main()
+  File "C:\Users\ThinkPad\Documents\machine-learning\text-summarization\src\pipelines\stage_01_data_ingestion.py", line 12, in main
+    data_ingestion_config = self.config.get_data_ingestion_config()
+                            ^^^^^^^^^^^
+AttributeError: 'DataIngestionPipeline' object has no attribute 'config'
+[2025-10-01 23:35:25,201 - INFO - main - >>>>>>> Stage Data Ingestion Stage started <<<<<<<<]
+[2025-10-01 23:35:25,202 - INFO - common - YAML file config\config.yaml loaded successfully]
+[2025-10-01 23:35:25,208 - INFO - common - YAML file params.yaml loaded successfully]
+[2025-10-01 23:36:12,647 - INFO - data_ingestion - artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 7903594
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "dbc016a060da18070593b83afff580c9b300f0b6ea4147a7988433e04df246ca"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 7E21:1C9C02:1B7B3E:200D29:68DDACAE
+Accept-Ranges: bytes
+Date: Wed, 01 Oct 2025 22:35:27 GMT
+Via: 1.1 varnish
+X-Served-By: cache-lis1490035-LIS
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1759358127.004286,VS0,VE363
+Vary: Authorization,Accept-Encoding
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 85353bc44b8798fd98dee4738959428f8700940d
+Expires: Wed, 01 Oct 2025 22:40:27 GMT
+Source-Age: 0
+
+]
+[2025-10-01 23:36:12,994 - INFO - main - >>>>>>> Stage Data Ingestion Stage completed <<<<<<<<
+
+x==========x]
