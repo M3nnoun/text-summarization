@@ -948,3 +948,11 @@ AttributeError: 'DataValidation' object has no attribute 'validate_all_files'. D
 [2025-10-02 00:42:07,652 - INFO - main - >>>>>>> Stage Data Ingestion Stage completed <<<<<<<<
 
 x==========x]
+[2025-10-03 22:55:34,931 - INFO - main - >>>>>>> Stage Data Transformation Stage started <<<<<<<<]
+[2025-10-03 22:55:34,989 - INFO - common - YAML file config\config.yaml loaded successfully]
+[2025-10-03 22:55:35,015 - INFO - common - YAML file params.yaml loaded successfully]
+[2025-10-03 22:55:41,701 - INFO - data_tranformation - Dataset loaded from artifacts/data_ingestion/samsum_dataset]
+[2025-10-03 22:55:59,296 - INFO - data_tranformation - Tokenized dataset saved to artifacts/data_transformation]
+[2025-10-03 22:55:59,479 - INFO - main - >>>>>>> Stage Data Transformation Stage completed <<<<<<<<
+
+x==========x]
